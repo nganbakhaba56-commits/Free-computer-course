@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidance Wing - Free Computer Course Registration</title>
+    <style>
+        :root {
+            --primary-blue: #0066cc;
+            --accent-teal: #00b4d8;
+            --light-bg: #f0f4f8;
+            --white: #ffffff;
+            --dark-text: #1d2d44;
+            --free-gold: #ffb703;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding: 40px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-card {
+            max-width: 700px;
+            width: 100%;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.06);
+            overflow: hidden;
+            border: 1px solid rgba(0, 102, 204, 0.1);
+        }
+
+        .header-banner {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .wing-logo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .wing-left, .wing-right {
+            width: 24px;
+            height: 12px;
+            background: var(--white);
+            opacity: 0.85;
+            display: inline-block;
+        }
+
+        .wing-left {
+            border-radius: 0 12px 12px 12px;
+            transform: rotate(-15deg);
+        }
+
+        .wing-right {
+            border-radius: 12px 0 12px 12px;
+            transform: rotate(15deg);
+        }
+
+        .header-banner h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .free-badge {
+            display: inline-block;
+            background-color: var(--free-gold);
+            color: #000000;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(255, 183, 3, 0.3);
+        }
+
+        .institute-info {
+            background: rgba(0, 102, 204, 0.03);
+            border-bottom: 1px dashed rgba(0, 102, 204, 0.15);
+            padding: 24px 30px;
+            text-align: left;
+        }
+
+        .institute-info p {
+            margin: 6px 0;
+            color: #3e4a56;
+            font-size: 0.98rem;
+        }
+
+        .form-body {
+            padding: 35px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            color: var(--primary-blue);
+<form class="form-body" action="https://api.web3forms.com/submit" method="POST">
+            
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            
+            <input type="hidden" name="redirect" value="https://YOUR_GITHUB_USERNAME.github.io/free-computer-course/">        }
+
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            font-size: 1rem;
+            background-color: #fafafa;
+            color: var(--dark-text);
+            transition: all 0.2s ease;
+        }
+
+        .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        .activities-selection {
+            background: #fdfdfd;
+            border: 1px solid #d0deec;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .activities-selection h3 {
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2eaf4;
+            padding-bottom: 8px;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (max-width: 500px) {
+            .activity-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .activity-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #f8fbfc;
+            border: 1px solid #eaf0f6;
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .activity-option:hover {
+            border-color: var(--primary-blue);
+            background: rgba(0, 102, 204, 0.02);
+        }
+
+        .activity-option input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary-blue);
+            cursor: pointer;
+        }
+
+        .activity-option span {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            margin-top: 10px;
+            width: 100%;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            background-color: #004da3;
+        }
+
+        .submit-btn:active {
+            transform: scale(0.99);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-card">
+        
+        <div class="header-banner">
+            <div class="logo-container">
+                <div class="wing-logo"><span class="wing-left"></span></div>
+                <h1>Guidance Wing</h1>
+                <div class="wing-logo"><span class="wing-right"></span></div>
+            </div>
+            <p>Free Computer Certificate Course Registration</p>
+            <div class="free-badge">🎉 100% Free Training</div>
+        </div>
+
+        <div class="institute-info">
+            <p><strong>📍 Training Venue:</strong> Kwakeithel Laishram Leikai, Imphal, Manipur</p>
+            <p><strong>📞 Contact Coordinator:</strong> +91 [Enter Phone Number Here]</p>
+        </div>
+
+        <form class="form-body" name="computer-course-registration" method="POST" data-netlify="true" action="/">
+            
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="student-name">Student's Full Name</label>
+                    <input type="text" id="student-name" name="student_name" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="parent-name">Parent / Guardian Name</label>
+                    <input type="text" id="parent-name" name="parent_name" placeholder="Enter parent's name" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="student-age">Age</label>
+                    <input type="number" id="student-age" name="student_age" placeholder="Age" min="10" max="40" required>
+                </div>
+                <div class="input-group">
+                    <label for="student-gender">Gender</label>
+                    <select id="student-gender" name="student_gender" required>
+                        <option value="" disabled selected>Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="student-education">Current Education / Qualification</label>
+                    <input type="text" id="student-education" name="qualification" placeholder="e.g., Class 12 / B.Sc" required>
+                </div>
+                <div class="input-group">
+                    <label for="has-laptop">Do you own a laptop?</label>
+                    <select id="has-laptop" name="owns_laptop" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Yes">Yes, I have a laptop</option>
+                        <option value="No">No, I need classroom setup</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="phone-primary">WhatsApp Number</label>
+                    <input type="tel" id="phone-primary" name="whatsapp_number" placeholder="Primary phone number" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone-secondary">Emergency Contact Number</label>
+                    <input type="tel" id="phone-secondary" name="emergency_number" placeholder="Backup phone number">
+                </div>
+            </div>
+
+            <div class="activities-selection">
+                <h3>🖥️ Select Training Modules Interested In (Choose below)</h3>
+                <div class="activity-grid">
+                    <label class="activity-option">
+                        <input type="checkbox" name="module_basics" value="Yes">
+                        <span>📁 Computer Basics & MS Office</span>
+                    </label>
+                    <label class="activity-option">
+                        <input type="checkbox" name="module_python" value="Yes">
+                        <span>🐍 Python Coding Basics</span>
+                    </label>
+                    <label class="activity-option">
+                        <input type="checkbox" name="module_webdev" value="Yes">
+                        <span>🌐 Web Design (HTML, CSS)</span>
+                    </label>
+                    <label class="activity-option">
+                        <input type="checkbox" name="module_ typing" value="Yes">
+                        <span>⌨️ Speed Typing Training</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="address">Residential Address</label>
+                <textarea id="address" name="address" rows="3" placeholder="Enter full residential address" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Free Enrollment</button>
+        </form>
+
+    </div>
+
+</body>
+</html>
